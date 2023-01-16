@@ -6,12 +6,12 @@ export default [
     title: 'ilocations.cms.sidebar.adminGroup',
     icon: 'fas fa-atlas',
     children: [
-      //pages.qlocations.countries,
-      //pages.qlocations.provinces,
-      //pages.qlocations.cities,
+      pages.qlocations.countries,
+      pages.qlocations.provinces,
+      pages.qlocations.cities,
       pages.qlocations.neighborhoods
-      //pages.qlocations.polygons,
-      //pages.qlocations.geozones,
+      pages.qlocations.polygons,
+      pages.qlocations.geozones,
     ]
   }
 ]

@@ -9,7 +9,7 @@ export default {
     page: () => import('@imagina/qcrud/_pages/admin/crudPage'),
     layout: () => import('@imagina/qsite/_layouts/master.vue'),
     title: 'ilocations.cms.sidebar.adminCountries',
-    icon: 'fas fa-globe-americas',
+    icon: 'fa-light fa-flag',
     authenticated: true,
     subHeader: {
       refresh: true
@@ -24,7 +24,7 @@ export default {
     page: () => import('@imagina/qcrud/_pages/admin/crudPage'),
     layout: () => import('@imagina/qsite/_layouts/master.vue'),
     title: 'ilocations.cms.sidebar.adminProvinces',
-    icon: 'fas fa-globe-americas',
+    icon: 'fa-light fa-building-flag',
     authenticated: true,
     subHeader: {
       refresh: true
@@ -40,7 +40,7 @@ export default {
     page: () => import('@imagina/qcrud/_pages/admin/crudPage'),
     layout: () => import('@imagina/qsite/_layouts/master.vue'),
     title: 'ilocations.cms.sidebar.adminCities',
-    icon: 'fas fa-building',
+    icon: 'fa-light fa-city',
     authenticated: true,
     subHeader: {
       refresh: true
@@ -55,7 +55,7 @@ export default {
     page: () => import('@imagina/qlocations/_pages/admin/cities/form'),
     layout: () => import('@imagina/qsite/_layouts/master.vue'),
     title: 'ilocations.cms.sidebar.adminCityCreate',
-    icon: 'fas fa-building',
+    icon: 'fa-light fa-city',
     authenticated: true,
     subHeader:{
       breadcrumb: ['qlocations.cities']
@@ -70,7 +70,7 @@ export default {
     page: () => import('@imagina/qlocations/_pages/admin/cities/form'),
     layout: () => import('@imagina/qsite/_layouts/master.vue'),
     title: 'ilocations.cms.sidebar.adminCityEdit',
-    icon: 'fas fa-building',
+    icon: 'fa-light fa-city',
     authenticated: true,
     subHeader:{
       refresh: true,
@@ -87,7 +87,7 @@ export default {
     page: () => import('@imagina/qcrud/_pages/admin/crudPage'),
     layout: () => import('@imagina/qsite/_layouts/master.vue'),
     title: 'ilocations.cms.sidebar.adminPolygons',
-    icon: 'fas fa-draw-polygon',
+    icon: 'fa-light fa-draw-polygon',
     authenticated: true,
     subHeader: {
       refresh: true
@@ -102,7 +102,7 @@ export default {
     page: () => import('@imagina/qlocations/_pages/admin/polygons/form'),
     layout: () => import('@imagina/qsite/_layouts/master.vue'),
     title: 'ilocations.cms.sidebar.adminPolygonCreate',
-    icon: 'fas fa-draw-polygon',
+    icon: 'fa-light fa-draw-polygon',
     authenticated: true,
     subHeader:{
       breadcrumb: ['qlocations.polygons']
@@ -117,7 +117,7 @@ export default {
     page: () => import('@imagina/qlocations/_pages/admin/polygons/form'),
     layout: () => import('@imagina/qsite/_layouts/master.vue'),
     title: 'ilocations.cms.sidebar.adminPolygonEdit',
-    icon: 'fas fa-draw-polygon',
+    icon: 'fa-light fa-draw-polygon',
     authenticated: true,
     subHeader:{
       refresh: true,
@@ -134,7 +134,7 @@ export default {
     page: () => import('@imagina/qcrud/_pages/admin/crudPage'),
     layout: () => import('@imagina/qsite/_layouts/master.vue'),
     title: 'ilocations.cms.sidebar.adminGeozones',
-    icon: 'fas fa-map-marker-alt',
+    icon: 'fa-light fa-chart-network',
     authenticated: true,
     subHeader: {
       refresh: true
@@ -149,7 +149,7 @@ export default {
     page: () => import('@imagina/qlocations/_pages/admin/geozones/form'),
     layout: () => import('@imagina/qsite/_layouts/master.vue'),
     title: 'ilocations.cms.sidebar.adminGeozoneCreate',
-    icon: 'fas fa-map-marker-alt',
+    icon: 'fa-light fa-chart-network',
     authenticated: true,
     subHeader:{
       breadcrumb: ['qlocations.geozones']
@@ -164,7 +164,7 @@ export default {
     page: () => import('@imagina/qlocations/_pages/admin/geozones/form'),
     layout: () => import('@imagina/qsite/_layouts/master.vue'),
     title: 'ilocations.cms.sidebar.adminGeozoneEdit',
-    icon: 'fas fa-map-marker-alt',
+    icon: 'fa-light fa-chart-network',
     authenticated: true,
     subHeader: {
       refresh: true,
@@ -181,7 +181,7 @@ export default {
     page: () => import('@imagina/qcrud/_pages/admin/crudPage'),
     layout: () => import('@imagina/qsite/_layouts/master.vue'),
     title: 'ilocations.cms.sidebar.adminNeighborhoods',
-    icon: 'fas fa-home',
+    icon: 'fa-light fa-house-building',
     authenticated: true,
     subHeader: {
       refresh: true
@@ -196,7 +196,7 @@ export default {
     page: () => import('@imagina/qlocations/_pages/admin/neighborhoods/form'),
     layout: () => import('@imagina/qsite/_layouts/master.vue'),
     title: 'ilocations.cms.sidebar.adminNeighborhoodCreate',
-    icon: 'fas fa-home',
+    icon: 'fa-light fa-house-building',
     authenticated: true,
     subHeader:{
       breadcrumb: ['qlocations.neighborhoods']
@@ -211,7 +211,7 @@ export default {
     page: () => import('@imagina/qlocations/_pages/admin/neighborhoods/form'),
     layout: () => import('@imagina/qsite/_layouts/master.vue'),
     title: 'ilocations.cms.sidebar.adminNeighborhoodEdit',
-    icon: 'fas fa-home',
+    icon: 'fa-light fa-house-building',
     authenticated: true,
     subHeader: {
       refresh: true,

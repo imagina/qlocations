@@ -4,7 +4,7 @@ const pages = config('pages') // Get Pages from config
 export default [
   {
     title: 'ilocations.cms.sidebar.adminGroup',
-    icon: 'fas fa-atlas',
+    icon: 'fa-light fa-earth-americas',
     children: [
       pages.qlocations.countries,
       pages.qlocations.provinces,

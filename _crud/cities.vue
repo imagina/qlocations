@@ -21,7 +21,7 @@ export default {
           columns: [
             {name: 'id', label: this.$tr('isite.cms.form.id'), field: 'id', style: 'width: 50px'},
             {name: 'name', label: this.$tr('isite.cms.form.name'), field: 'name', align: 'left'},
-            {name: 'code', label: this.$tr('isite.cms.form.code'), field: 'code', align: 'left'},
+            {name: 'code', label: this.$tr('ilocations.cms.form.code'), field: 'code', align: 'left'},
             {
               name: 'country', label: this.$tr('ilocations.cms.form.country'), field: 'country', align: 'left',
               format: val => val.name || '-'
@@ -80,7 +80,7 @@ export default {
             translatable: true,
             required: true,
             props: {
-              label: `${this.$tr('isite.cms.form.code')}*`
+              label: `${this.$tr('ilocations.cms.form.code')}*`
             }
           },
           countryId: {

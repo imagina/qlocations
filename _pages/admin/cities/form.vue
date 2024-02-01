@@ -198,7 +198,7 @@
   }
 </script>
 
-<style lang="stylus">
+<style lang="sass">
   .location-form
     #crudContentPage
       .q-btn

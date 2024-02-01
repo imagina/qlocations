@@ -121,8 +121,8 @@
     },
     methods: {
       getPointValues(e){
-        console.warn(e)
-        this.locale.form.points = e.layer.editing.latlngs
+        const data = e.layer.editing.latlngs
+        this.locale.form.points = data ? data.flat(3) : null
       },
       async initForm() {
         this.loading = true

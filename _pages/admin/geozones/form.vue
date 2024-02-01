@@ -285,7 +285,7 @@
   }
 </script>
 
-<style lang="sass">
+<style lang="scss">
   .location-form
     .modal-form-crud
       .layout-padding

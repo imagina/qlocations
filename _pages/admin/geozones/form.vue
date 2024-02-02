@@ -286,13 +286,20 @@
 </script>
 
 <style lang="scss">
-  .location-form
-    .modal-form-crud
-      .layout-padding
-        padding 0!important
-    #crudContentPage
-      .q-btn
-        .q-btn__content
-          div
-            display none
+  .location-form {
+    .modal-form-crud {
+      .layout-padding {
+        padding: 0 !important;
+      }
+    }
+    #crudContentPage {
+      .q-btn {
+        .q-btn__content {
+          div {
+            display: none;
+          }
+        }
+      }
+    }
+  }
 </style>

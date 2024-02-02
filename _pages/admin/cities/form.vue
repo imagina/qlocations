@@ -199,10 +199,15 @@
 </script>
 
 <style lang="scss">
-  .location-form
-    #crudContentPage
-      .q-btn
-        .q-btn__content
-          div
-            display none
+.location-form {
+  #crudContentPage {
+    .q-btn {
+      .q-btn__content {
+        div {
+          display: none;
+        }
+      }
+    }
+  }
+}
 </style>

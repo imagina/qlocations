@@ -54,7 +54,8 @@
   import { LMap, LTileLayer, LLayerGroup, LPolygon } from 'vue2-leaflet';
   import 'leaflet/dist/leaflet.css';
   import polygonDrawer from '@imagina/qlocations/_components/polygonDrawer'
-  import {mapGeolocationActions, mapGeolocationGetters} from "quasar-app-extension-geolocation/src/store";
+  //[ptc]
+  // import {mapGeolocationActions, mapGeolocationGetters} from "quasar-app-extension-geolocation/src/store";
   export default {
     components: {
       LMap,
@@ -107,14 +108,15 @@
           }
         }
       },
-      ...mapGeolocationGetters([
-        'isPermissionKnown',
-        'isPermissionGranted',
-        'isPermissionPrompt',
-        'isPermissionDenied',
-        'hasPosition',
-        'coords',
-      ]),
+      //[ptc]
+      // ...mapGeolocationGetters([
+      //   'isPermissionKnown',
+      //   'isPermissionGranted',
+      //   'isPermissionPrompt',
+      //   'isPermissionDenied',
+      //   'hasPosition',
+      //   'coords',
+      // ]),
       token(){
         this.$store.getters['qsiteApp/getSettingValueByName']('isite::api-maps')
       }
@@ -229,10 +231,11 @@
               this.doQueryPermission()
             })
       },
-      ...mapGeolocationActions([
-        'samplePosition',
-        'queryPermission'
-      ])
+      //[ptc]
+      // ...mapGeolocationActions([
+      //   'samplePosition',
+      //   'queryPermission'
+      // ])
     }
   }
 </script>

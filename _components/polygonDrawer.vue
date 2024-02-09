@@ -7,7 +7,7 @@
 import L from 'leaflet'
 import 'leaflet-draw/dist/leaflet.draw.js'
 import 'leaflet-draw/dist/leaflet.draw.css'
-import { findRealParent, propsBinder } from 'vue2-leaflet'
+import { findRealParent, propsBinder } from '@vue-leaflet/vue-leaflet'
 export default {
   name: 'polygonDrawer',
   props: {

@@ -78,7 +78,7 @@
               type: 'crud',
               props: {
                 crudType: 'select',
-                crudData: import('@imagina/qlocations/_crud/countries'),
+                crudData: import('modules/qlocations/_crud/countries'),
                 crudProps: {
                   label: `${this.$tr('ilocations.cms.form.country')}*`,
                   rules: [

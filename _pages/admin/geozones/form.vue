@@ -122,9 +122,9 @@
 </template>
 
 <script>
-  import cityForm from '@imagina/qlocations/_pages/admin/cities/form'
-  import polygonForm from '@imagina/qlocations/_pages/admin/polygons/form'
-  import neighborhoodForm from '@imagina/qlocations/_pages/admin/neighborhoods/form'
+  import cityForm from 'modules/qlocations/_pages/admin/cities/form'
+  import polygonForm from 'modules/qlocations/_pages/admin/polygons/form'
+  import neighborhoodForm from 'modules/qlocations/_pages/admin/neighborhoods/form'
   export default {
     components: {
       cityForm,

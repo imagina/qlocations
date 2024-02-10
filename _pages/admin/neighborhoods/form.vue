@@ -21,7 +21,7 @@
               <!--Crud countries-->
               <crud
                   ref="countries"
-                  :crud-data="import('@imagina/qlocations/_crud/countries')"
+                  :crud-data="import('modules/qlocations/_crud/countries')"
                   v-model="locale.formTemplate.countryId" type="select"
                   :crud-props="{label : `${$tr('ilocations.cms.form.country')} *`, clearable: true, rules: [val => !!val || $tr('isite.cms.message.fieldRequired')]}"
                   :config="{options : {label : 'name', value : 'id'}}"
@@ -32,7 +32,7 @@
               <!--Crud provinces-->
               <crud
                   ref="provinces"
-                  :crud-data="import('@imagina/qlocations/_crud/provinces')"
+                  :crud-data="import('modules/qlocations/_crud/provinces')"
                   v-model="locale.formTemplate.provinceId" type="select"
                   :crud-props="{label : `${$tr('ilocations.cms.form.province')} *`, clearable: true, rules: [val => !!val || $tr('isite.cms.message.fieldRequired')]}"
                   :config="{options : {label : 'name', value : 'id'}, requestParams: {filter: {country: locale.formTemplate.countryId}}}"
@@ -45,7 +45,7 @@
                   <!--Crud cities-->
                   <crud
                       ref="cities"
-                      :crud-data="import('@imagina/qlocations/_crud/cities')"
+                      :crud-data="import('modules/qlocations/_crud/cities')"
                       v-model="locale.formTemplate.cityId" type="select"
                       :crud-props="{label : `${$tr('ilocations.cms.form.city')} *`, clearable: true, rules: [val => !!val || $tr('isite.cms.message.fieldRequired')]}"
                       :custom-data="{create: false}"
@@ -96,7 +96,7 @@
 </template>
 
 <script>
-  import cityForm from '@imagina/qlocations/_pages/admin/cities/form'
+  import cityForm from 'modules/qlocations/_pages/admin/cities/form'
   export default {
     components: {
       cityForm

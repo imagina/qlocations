@@ -88,7 +88,7 @@ export default {
             type: 'crud',
             props: {
               crudType: 'select',
-              crudData: import('@imagina/qlocations/_crud/countries'),
+              crudData: import('modules/qlocations/_crud/countries'),
               crudProps: {
                 label: `${this.$tr('ilocations.cms.form.country')}*`,
               },
@@ -105,7 +105,7 @@ export default {
             type: 'crud',
             props: {
               crudType: 'select',
-              crudData: import('@imagina/qlocations/_crud/provinces'),
+              crudData: import('modules/qlocations/_crud/provinces'),
               crudProps: {
                 label: `${this.$tr('ilocations.cms.form.province')}*`,
                 vIf: this.crudInfo.countryId ? true : false,

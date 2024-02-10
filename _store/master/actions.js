@@ -1,4 +1,4 @@
-import locationsService from '@imagina/qlocations/_services/index'
+import locationsService from 'modules/qlocations/_services/index'
 
 export const GET_COUNTRIES = ({ commit, state, dispatch }, params = {}) => {
   return new Promise(async (resolve, reject) => {

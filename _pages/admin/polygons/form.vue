@@ -53,7 +53,7 @@
   import {latLng, Icon} from "leaflet";
   import { LMap, LTileLayer, LLayerGroup, LPolygon } from '@vue-leaflet/vue-leaflet';
   import 'leaflet/dist/leaflet.css';
-  import polygonDrawer from '@imagina/qlocations/_components/polygonDrawer'
+  import polygonDrawer from 'modules/qlocations/_components/polygonDrawer'
   //[ptc]
   // import {mapGeolocationActions, mapGeolocationGetters} from "quasar-app-extension-geolocation/src/store";
   export default {

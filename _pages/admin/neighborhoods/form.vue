@@ -25,7 +25,7 @@
                   v-model="locale.formTemplate.countryId" type="select"
                   :crud-props="{label : `${$tr('ilocations.cms.form.country')} *`, clearable: true, rules: [val => !!val || $tr('isite.cms.message.fieldRequired')]}"
                   :config="{options : {label : 'name', value : 'id'}}"
-                  @input="()=> { if(locale.formTemplate.countryId) $refs.provinces.init() }"
+                  @update:modelValue="()=> { if(locale.formTemplate.countryId) $refs.provinces.init() }"
                   />
             </div>
             <div class="col-12 col-md-6">
@@ -36,7 +36,7 @@
                   v-model="locale.formTemplate.provinceId" type="select"
                   :crud-props="{label : `${$tr('ilocations.cms.form.province')} *`, clearable: true, rules: [val => !!val || $tr('isite.cms.message.fieldRequired')]}"
                   :config="{options : {label : 'name', value : 'id'}, requestParams: {filter: {country: locale.formTemplate.countryId}}}"
-                  @input="()=> { if(locale.formTemplate.provinceId) $refs.cities.init() }"
+                  @update:modelValue="()=> { if(locale.formTemplate.provinceId) $refs.cities.init() }"
                   />
             </div>
             <div class="col-12 col-md-6">

@@ -32,7 +32,7 @@
                       v-model="locale.formTemplate.countryId" type="select"
                       :crud-props="{label : `${$tr('ilocations.cms.form.country')} *`, clearable: true, rules: [val => !!val || $tr('isite.cms.message.fieldRequired')]}"
                       :config="{options : {label : 'name', value : 'id'}}"
-                      @input="()=> { if(locale.formTemplate.countryId) $refs.provinces.init() }"
+                      @update:modelValue="()=> { if(locale.formTemplate.countryId) $refs.provinces.init() }"
                   />
                 </div>
                 <div class="col-12 col-sm-6">

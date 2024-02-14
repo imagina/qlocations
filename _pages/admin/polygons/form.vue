@@ -56,6 +56,7 @@
   import polygonDrawer from 'modules/qlocations/_components/polygonDrawer'
   //[ptc]
   // import {mapGeolocationActions, mapGeolocationGetters} from "quasar-app-extension-geolocation/src/store";
+  import { eventBus } from 'src/plugins/utils'
   export default {
     components: {
       LMap,
@@ -72,7 +73,7 @@
     mounted() {
       this.$nextTick(function () {
         this.initForm()
-        this.$root.$on('page.data.refresh', () => this.initForm())//Listen refresh event
+        eventBus.on('page.data.refresh', () => this.initForm())//Listen refresh event
       })
     },
     data() {

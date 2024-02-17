@@ -119,7 +119,7 @@
       //   'coords',
       // ]),
       token(){
-        this.$store.getters['qsiteApp/getSettingValueByName']('isite::api-maps')
+        this.$getSetting('isite::api-maps')
       }
     },
     methods: {

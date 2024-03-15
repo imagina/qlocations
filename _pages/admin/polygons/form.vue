@@ -3,11 +3,9 @@
 
     <div class="relative-position q-mb-lg backend-page">
       <div class="box" v-if="success">
-
         <div class="col-12">
           <locales v-model="locale" ref="localeComponent" :form="$refs.formContent"/>
         </div>
-
         <!--Form-->
         <q-form autocorrect="off" autocomplete="off" ref="formContent" class="full-width q-my-sm" v-if="locale.success"
                 @submit="itemId?updateItem():createItem()" @validation-error="$alert.error($tr('isite.cms.message.formInvalid'))">
@@ -22,14 +20,7 @@
               </q-field>
             </div>
             <div class="col-12">
-              <l-map :draw-control="true" id="lMap" :zoom="mapZoom" :center="center" @draw:created="getPointValues"
-                     :style="`height : 300px`" ref="map">
-                <l-tile-layer name="OpenStreetMap" layer-type="base" :token="token"
-                              attribution='&copy; <a target="_blank" href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-                              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-                <polygon-drawer />
-                <l-polygon :lat-lngs="locale.formTemplate.points" />
-              </l-map>
+              <dynamic-field v-model="modelMap" @update:modelValue=" val => locale.formTemplate.points = val.points" class="q-mb-md" :field="mapField"/>
             </div>
           </div>
           <q-page-sticky
@@ -50,55 +41,16 @@
 </template>
 
 <script>
-  import {latLng, Icon} from "leaflet";
-  import { LMap, LTileLayer, LLayerGroup, LPolygon } from '@vue-leaflet/vue-leaflet';
-  import 'leaflet/dist/leaflet.css';
-  import polygonDrawer from 'modules/qlocations/_components/polygonDrawer'
-  //[ptc]
-  // import {mapGeolocationActions, mapGeolocationGetters} from "quasar-app-extension-geolocation/src/store";
-  import { eventBus } from 'src/plugins/utils'
   export default {
-    components: {
-      LMap,
-      LTileLayer,
-      LLayerGroup,
-      LPolygon,
-      polygonDrawer,
-    },
-    watch: {
-      $route(to, from) {
-        this.initForm()
-      }
-    },
+    components: {},
     mounted() {
       this.$nextTick(function () {
         this.initForm()
-        eventBus.on('page.data.refresh', () => this.initForm())//Listen refresh event
       })
     },
     data() {
       return {
-        locale: {},
-        map:{
-          class: null,
-          polygon: null,
-          drawing: null
-        },
-        center: false,
-        mapZoom: 14,
-        loading: false,
-        success: false,
-        itemId: false,
-      }
-    },
-    props:{
-      id:{
-        default: null
-      }
-    },
-    computed: {
-      dataLocale() {
-        return {
+        locale: {
           fields: {
             points: [],
             options: {},
@@ -107,34 +59,39 @@
             name: '',
             description: '',
           }
+        },
+        modelMap: {},
+        loading: false,
+        success: false,
+        itemId: false,
+        mapField: {
+          //value: null,
+          //value: {lat: '6.194971473195364', lng: '-75.5691021855033' },
+          type: 'positionMarkerMap',
+          help: {description: this.$tr('icommerce.cms.form.mapHelp')},
+          required: false,
+          isFakeField: false,
+          props: {
+            polygonControls: true,
+          }
         }
-      },
-      //[ptc]
-      // ...mapGeolocationGetters([
-      //   'isPermissionKnown',
-      //   'isPermissionGranted',
-      //   'isPermissionPrompt',
-      //   'isPermissionDenied',
-      //   'hasPosition',
-      //   'coords',
-      // ]),
+      }
+    },
+    props:{
+      id:{
+        default: null
+      }
+    },
+    computed: {      
       token(){
         this.$getSetting('isite::api-maps')
       }
     },
     methods: {
-      getPointValues(e){
-        const data = e.layer.editing.latlngs
-        this.locale.form.points = data ? data.flat(3) : null
-      },
       async initForm() {
         this.loading = true
         this.success = false
-        this.locale = this.$clone(this.dataLocale)
-        this.itemId = this.id !==null?this.id:this.$route.params.id
-        if (this.locale.success) this.$refs.localeComponent.vReset()
-        await this.getLocationPermisssions()
-        this.center = this.coords ? latLng(this.coords.latitude, this.coords.longitude) : ['4.642129714308486', '-74.11376953125001']
+        this.itemId = this.id !==null ? this.id : this.$route.params.id
         await this.getData()
         this.success = true
         this.loading = false
@@ -153,7 +110,9 @@
             }
             //Request
             this.$crud.show(configName, itemId, params).then(response => {
-              this.orderDataItemToLocale(response.data)
+              this.locale.form = this.$clone(response.data)
+              this.modelMap.points = this.$clone(response.data.points)
+              //this.points = response.data.points
               resolve(true)//Resolve
             }).catch(error => {
               this.$apiResponse.handleError(error, () => {
@@ -166,13 +125,6 @@
             resolve(true)//Resolve
           }
         })
-      },
-      orderDataItemToLocale(data) {
-        let orderData = this.$clone(data)
-        this.locale.form = this.$clone(orderData)
-        let pts = this.$clone(this.locale.form.points)
-        pts = pts.flat(3)
-        this.center = pts[pts.length - 1]
       },
       async updateItem() {
         if (await this.$refs.localeComponent.validateForm()) {
@@ -212,35 +164,7 @@
         }
         //response.selectable = JSON.stringify(response.selectable)
         return response
-      },
-      doQueryPermission () {
-        this.queryPermission()
-            .then(() => {
-              if (this.isPermissionDenied) {
-                // poll permission as the user might allow them in a separate tab
-                this.pollingTimer = setTimeout(() => this.doQueryPermission(), 2000)
-              } else if (this.pollingTimer) {
-                clearTimeout(this.pollingTimer)
-              }
-            })
-      },
-      getLocationPermisssions () {
-        this.samplePosition()
-            .catch(() => { })
-            .finally(() => {
-              // update permissions (as the user might have enabled them)
-              this.doQueryPermission()
-            })
-      },
-      //[ptc]
-      // ...mapGeolocationActions([
-      //   'samplePosition',
-      //   'queryPermission'
-      // ])
+      }
     }
   }
 </script>
-
-<style scoped>
-
-</style>

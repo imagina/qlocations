@@ -165,7 +165,7 @@
                 ],
               }
             },
-            iso2: {
+            iso_2: {
               value: '',
               type: 'input',
               isTranslatable: false,
@@ -176,7 +176,7 @@
                 ],
               }
             },
-            iso3: {
+            iso_3: {
               value: '',
               type: 'input',
               isTranslatable: false,

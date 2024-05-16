@@ -62,7 +62,7 @@
                 ],
               }
             },
-            iso2: {
+            iso_2: {
               value: '',
               type: 'input',
               isTranslatable: false,

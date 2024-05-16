@@ -69,7 +69,7 @@ export default {
         formLeft: {
           name: {
             type: 'input',
-            translatable: true,
+            isTranslatable: true,
             required: true,
             props: {
               label: `${this.$tr('isite.cms.form.name')}*`
@@ -77,7 +77,6 @@ export default {
           },
           code: {
             type: 'input',
-            translatable: true,
             required: true,
             props: {
               label: `${this.$tr('ilocations.cms.form.code')}*`

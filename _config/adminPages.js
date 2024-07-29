@@ -93,37 +93,6 @@ export default {
       refresh: true
     }
   },
-  //Polygon create
-  polygonCreate: {
-    permission: null,
-    activated: true,
-    path: '/locations/polygons/create',
-    name: 'qlocations.admin.polygons.create',
-    page: () => import('modules/qlocations/_pages/admin/polygons/form'),
-    layout: () => import('layouts/master.vue'),
-    title: 'ilocations.cms.sidebar.adminPolygonCreate',
-    icon: 'fa-light fa-draw-polygon',
-    authenticated: true,
-    subHeader:{
-      breadcrumb: ['qlocations.polygons']
-    }
-  },
-  //Polygon edit
-  polygonEdit: {
-    permission: null,
-    activated: true,
-    path: '/locations/polygons/:id',
-    name: 'qlocations.admin.polygons.edit',
-    page: () => import('modules/qlocations/_pages/admin/polygons/form'),
-    layout: () => import('layouts/master.vue'),
-    title: 'ilocations.cms.sidebar.adminPolygonEdit',
-    icon: 'fa-light fa-draw-polygon',
-    authenticated: true,
-    subHeader:{
-      refresh: true,
-      breadcrumb: ['qlocations.polygons']
-    }
-  },
   //Geozones
   geozones: {
     permission: 'ilocations.geozones.manage',
@@ -218,5 +187,4 @@ export default {
       breadcrumb: ['qlocations.neighborhoods']
     }
   },
-
 }

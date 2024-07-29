@@ -123,13 +123,11 @@
 
 <script>
   import cityForm from 'modules/qlocations/_pages/admin/cities/form'
-  import polygonForm from 'modules/qlocations/_pages/admin/polygons/form'
   import neighborhoodForm from 'modules/qlocations/_pages/admin/neighborhoods/form'
   import { eventBus } from 'src/plugins/utils'
   export default {
     components: {
       cityForm,
-      polygonForm,
       neighborhoodForm,
     },
     watch: {

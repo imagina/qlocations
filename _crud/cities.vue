@@ -36,7 +36,8 @@ export default {
             },
             {name: 'actions', label: this.$tr('isite.cms.form.actions'), align: 'left'},
           ],
-          requestParams: {include: 'country,province'},
+          requestParams: {include: 'translations,country,province'},
+          
           filters: {
             country: {
               value: null,
@@ -63,7 +64,8 @@ export default {
           }
         },
         update: {
-          title: this.$tr('ilocations.cms.updateCity')
+          title: this.$tr('ilocations.cms.updateCity'),
+          requestParams: {include: 'translations'}
         },
         delete: true,
         formLeft: {

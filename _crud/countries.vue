@@ -28,12 +28,12 @@
               },
               {name: 'actions', label: this.$tr('isite.cms.form.actions'), align: 'left'},
             ],
-            //requestParams: {include: 'parent'}
+            requestParams: {include: 'translations'}
           },
           update: {
             title: this.$tr('ilocations.cms.updateCountry'),
             //to: 'qcommerce.admin.taxRates.edit'
-            //requestParams: {include: 'parent'}
+            requestParams: {include: 'translations'}
           },
           delete: true,
           formLeft: {

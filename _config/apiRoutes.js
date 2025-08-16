@@ -1,6 +1,6 @@
 const moduleName = 'ilocations';
-const moduleVersion = 'v2';
-const urlBase = `/${moduleVersion}/${moduleName}`;
+const moduleVersion = 'v1';
+const urlBase = `/${moduleName}/${moduleVersion}`;
 
 export default {
   countries: `${urlBase}/countries`,

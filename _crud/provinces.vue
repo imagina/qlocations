@@ -28,7 +28,7 @@
               },
               {name: 'actions', label: this.$tr('isite.cms.form.actions'), align: 'left'},
             ],
-            //requestParams: {include: 'parent'}
+            requestParams: {include: 'translations'},
             filters:{
               country: {
                 value: null,
@@ -38,6 +38,7 @@
                 },
                 loadOptions: {
                   apiRoute: 'apiRoutes.qlocations.countries',
+                  requestParams: {include: 'translations'},
                   select: {label: 'name', id: 'id'},
                 }
               },
@@ -46,7 +47,7 @@
           update: {
             title: this.$tr('ilocations.cms.updateProvince'),
             //to: 'qcommerce.admin.taxRates.edit'
-            //requestParams: {include: 'parent'}
+            requestParams: {include: 'translations'}
           },
           delete: true,
           formLeft: {
@@ -73,6 +74,7 @@
                 ],
               }
             },
+          
             countryId: {
               value: 48,
               type: 'crud',
@@ -85,12 +87,16 @@
                     val => !!val || this.$tr('isite.cms.message.fieldRequired')
                   ],
                 },
+                ///requestParams: {include: 'translations'},                
                 config: {
                   options: {label: 'name', value: 'id'},
+                  filterByQuery: true,
                 }
               },
             },
+          
           },
+          
           /*formRight: {
 
           },*/

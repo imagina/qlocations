@@ -1,4 +1,4 @@
-const moduleName = 'ilocations';
+const moduleName = 'ilocation';
 const moduleVersion = 'v1';
 const urlBase = `/${moduleName}/${moduleVersion}`;
 

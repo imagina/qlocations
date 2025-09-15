@@ -15,7 +15,7 @@
           apiRoute: 'apiRoutes.qlocations.geozones',
           //permission: 'icommerce.manufacturers',
           create: {
-            title: this.$tr('ilocations.cms.newGeozone'),
+            title: this.$tr('ilocation.cms.newGeozone'),
             to: {name: 'qlocations.admin.geozones.create'}
           },
           read: {
@@ -34,7 +34,7 @@
                 value: null,
                 type: 'select',
                 props : {
-                  label: this.$tr('ilocations.cms.form.country'),
+                  label: this.$tr('ilocation.cms.form.country'),
                 },
                 loadOptions: {
                   apiRoute: 'apiRoutes.qlocations.countries',
@@ -45,7 +45,7 @@
                 value: null,
                 type: 'select',
                 props : {
-                  label: this.$tr('ilocations.cms.form.province'),
+                  label: this.$tr('ilocation.cms.form.province'),
                 },
                 loadOptions: {
                   apiRoute: 'apiRoutes.qlocations.provinces',
@@ -55,7 +55,7 @@
             }
           },
           update: {
-            title: this.$tr('ilocations.cms.updateGeozone'),
+            title: this.$tr('ilocation.cms.updateGeozone'),
             to: 'qlocations.admin.geozones.edit'
             //requestParams: {include: 'parent'}
           },

@@ -15,19 +15,19 @@ export default {
         apiRoute: 'apiRoutes.qlocations.cities',
         //permission: 'icommerce.manufacturers',
         create: {
-          title: this.$tr('ilocations.cms.newCity')
+          title: this.$tr('ilocation.cms.newCity')
         },
         read: {
           columns: [
             {name: 'id', label: this.$tr('isite.cms.form.id'), field: 'id', style: 'width: 50px'},
             {name: 'name', label: this.$tr('isite.cms.form.name'), field: 'name', align: 'left'},
-            {name: 'code', label: this.$tr('ilocations.cms.form.code'), field: 'code', align: 'left'},
+            {name: 'code', label: this.$tr('ilocation.cms.form.code'), field: 'code', align: 'left'},
             {
-              name: 'country', label: this.$tr('ilocations.cms.form.country'), field: 'country', align: 'left',
+              name: 'country', label: this.$tr('ilocation.cms.form.country'), field: 'country', align: 'left',
               format: val => val.name || '-'
             },
             {
-              name: 'province', label: this.$tr('ilocations.cms.form.province'), field: 'province', align: 'left',
+              name: 'province', label: this.$tr('ilocation.cms.form.province'), field: 'province', align: 'left',
               format: val => val.name || '-'
             },
             {
@@ -37,13 +37,13 @@ export default {
             {name: 'actions', label: this.$tr('isite.cms.form.actions'), align: 'left'},
           ],
           requestParams: {include: 'translations,country,province'},
-          
+
           filters: {
             country: {
               value: null,
               type: 'select',
               props: {
-                label: this.$tr('ilocations.cms.form.country'),
+                label: this.$tr('ilocation.cms.form.country'),
               },
               loadOptions: {
                 apiRoute: 'apiRoutes.qlocations.countries',
@@ -54,7 +54,7 @@ export default {
               value: null,
               type: 'select',
               props: {
-                label: this.$tr('ilocations.cms.form.province'),
+                label: this.$tr('ilocation.cms.form.province'),
               },
               loadOptions: {
                 apiRoute: 'apiRoutes.qlocations.provinces',
@@ -64,7 +64,7 @@ export default {
           }
         },
         update: {
-          title: this.$tr('ilocations.cms.updateCity'),
+          title: this.$tr('ilocation.cms.updateCity'),
           requestParams: {include: 'translations'}
         },
         delete: true,
@@ -81,7 +81,7 @@ export default {
             type: 'input',
             required: true,
             props: {
-              label: `${this.$tr('ilocations.cms.form.code')}*`
+              label: `${this.$tr('ilocation.cms.form.code')}*`
             }
           },
           countryId: {
@@ -91,7 +91,7 @@ export default {
               crudType: 'select',
               crudData: import('modules/qlocations/_crud/countries'),
               crudProps: {
-                label: `${this.$tr('ilocations.cms.form.country')}*`,
+                label: `${this.$tr('ilocation.cms.form.country')}*`,
               },
               config: {
                 filterByQuery: true,
@@ -108,7 +108,7 @@ export default {
               crudType: 'select',
               crudData: import('modules/qlocations/_crud/provinces'),
               crudProps: {
-                label: `${this.$tr('ilocations.cms.form.province')}*`,
+                label: `${this.$tr('ilocation.cms.form.province')}*`,
                 vIf: this.crudInfo.countryId ? true : false,
               },
               config: {

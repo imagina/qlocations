@@ -23,7 +23,7 @@
                   ref="countries"
                   :crud-data="import('modules/qlocations/_crud/countries')"
                   v-model="locale.formTemplate.countryId" type="select"
-                  :crud-props="{label : `${$tr('ilocations.cms.form.country')} *`, clearable: true, rules: [val => !!val || $tr('isite.cms.message.fieldRequired')]}"
+                  :crud-props="{label : `${$tr('ilocation.cms.form.country')} *`, clearable: true, rules: [val => !!val || $tr('isite.cms.message.fieldRequired')]}"
                   :config="{options : {label : 'name', value : 'id'}}"
                   @update:modelValue="()=> { if(locale.formTemplate.countryId) $refs.provinces.init() }"
                   />
@@ -34,7 +34,7 @@
                   ref="provinces"
                   :crud-data="import('modules/qlocations/_crud/provinces')"
                   v-model="locale.formTemplate.provinceId" type="select"
-                  :crud-props="{label : `${$tr('ilocations.cms.form.province')} *`, clearable: true, rules: [val => !!val || $tr('isite.cms.message.fieldRequired')]}"
+                  :crud-props="{label : `${$tr('ilocation.cms.form.province')} *`, clearable: true, rules: [val => !!val || $tr('isite.cms.message.fieldRequired')]}"
                   :config="{options : {label : 'name', value : 'id'}, requestParams: {filter: {country: locale.formTemplate.countryId}}}"
                   @update:modelValue="()=> { if(locale.formTemplate.provinceId) $refs.cities.init() }"
                   />
@@ -47,7 +47,7 @@
                       ref="cities"
                       :crud-data="import('modules/qlocations/_crud/cities')"
                       v-model="locale.formTemplate.cityId" type="select"
-                      :crud-props="{label : `${$tr('ilocations.cms.form.city')} *`, clearable: true, rules: [val => !!val || $tr('isite.cms.message.fieldRequired')]}"
+                      :crud-props="{label : `${$tr('ilocation.cms.form.city')} *`, clearable: true, rules: [val => !!val || $tr('isite.cms.message.fieldRequired')]}"
                       :custom-data="{create: false}"
                       :config="{options : {label : 'name', value : 'id'}, requestParams: {filter: {province_id: locale.formTemplate.provinceId}}}"
                   />
@@ -55,7 +55,7 @@
                 <div class="col-4 col-md-2 text-right">
                   <q-btn size="sm" class="btn-small" color="green" icon="fas fa-plus" @click="showCityCreate = true">
                     <q-tooltip :offset="[10, 10]">
-                      {{ $tr('ilocations.cms.newCity') }}
+                      {{ $tr('ilocation.cms.newCity') }}
                     </q-tooltip>
                   </q-btn>
                 </div>
@@ -82,7 +82,7 @@
         <!--Header-->
         <q-toolbar class="bg-primary text-white">
           <q-toolbar-title>
-            <label>{{$tr('ilocations.cms.newCity')}}</label>
+            <label>{{$tr('ilocation.cms.newCity')}}</label>
           </q-toolbar-title>
           <q-btn flat v-close-popup icon="fas fa-times"/>
         </q-toolbar>

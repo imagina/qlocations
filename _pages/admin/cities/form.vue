@@ -19,7 +19,7 @@
             </div>
             <div class="col-12 col-md-6">
               <q-input outlined dense v-model="locale.formTemplate.code"
-                       :label="`${$tr('ilocations.cms.form.code')} (${locale.language})*`"
+                       :label="`${$tr('ilocation.cms.form.code')} (${locale.language})*`"
                        :rules="[val => !!val || $tr('isite.cms.message.fieldRequired')]"/>
             </div>
             <div class="col-12">
@@ -30,7 +30,7 @@
                       ref="countries"
                       :crud-data="import('modules/qlocations/_crud/countries')"
                       v-model="locale.formTemplate.countryId" type="select"
-                      :crud-props="{label : `${$tr('ilocations.cms.form.country')} *`, clearable: true, rules: [val => !!val || $tr('isite.cms.message.fieldRequired')]}"
+                      :crud-props="{label : `${$tr('ilocation.cms.form.country')} *`, clearable: true, rules: [val => !!val || $tr('isite.cms.message.fieldRequired')]}"
                       :config="{options : {label : 'name', value : 'id'}}"
                       @update:modelValue="()=> { if(locale.formTemplate.countryId) $refs.provinces.init() }"
                   />
@@ -40,7 +40,7 @@
                       ref="provinces"
                       :crud-data="import('modules/qlocations/_crud/provinces')"
                       v-model="locale.formTemplate.provinceId" type="select"
-                      :crud-props="{label : `${$tr('ilocations.cms.form.province')} *`, clearable: true, rules: [val => !!val || $tr('isite.cms.message.fieldRequired')]}"
+                      :crud-props="{label : `${$tr('ilocation.cms.form.province')} *`, clearable: true, rules: [val => !!val || $tr('isite.cms.message.fieldRequired')]}"
                       :config="{options : {label : 'name', value : 'id'}, requestParams: {filter: {country: locale.formTemplate.countryId}}}"
                   />
                 </div>

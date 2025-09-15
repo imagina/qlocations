@@ -3,9 +3,10 @@ import pages from 'src/setup/pages' // Get Pages from config
 //E-commerce
 export default [
   {
-    title: 'ilocations.cms.sidebar.adminGroup',
+    title: 'ilocation.cms.sidebar.adminGroup',
     icon: 'fa-light fa-earth-americas',
     children: [
+      pages.qlocations.locatables,
       pages.qlocations.countries,
       pages.qlocations.provinces,
       pages.qlocations.cities,

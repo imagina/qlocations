@@ -1,14 +1,28 @@
 export default {
-  //Product List
+  locatables: {
+    permission: 'ilocation.locatables.manage',
+    activated: true,
+    path: '/locations/locatables',
+    name: 'qlocations.admin.locatables.index',
+    crud: import('modules/qlocations/_crud/locatables'),
+    page: () => import('modules/qcrud/_pages/admin/crudPage'),
+    layout: () => import('layouts/master.vue'),
+    title: 'ilocation.cms.sidebar.adminLocatables',
+    icon: 'fa-light fa-map-location-dot',
+    authenticated: true,
+    subHeader: {
+      refresh: true
+    }
+  },
   countries: {
-    permission: 'ilocations.countries.manage',
+    permission: 'ilocation.countries.manage',
     activated: true,
     path: '/locations/countries',
     name: 'qlocations.admin.countries.index',
     crud: import('modules/qlocations/_crud/countries'),
     page: () => import('modules/qcrud/_pages/admin/crudPage'),
     layout: () => import('layouts/master.vue'),
-    title: 'ilocations.cms.sidebar.adminCountries',
+    title: 'ilocation.cms.sidebar.adminCountries',
     icon: 'fa-light fa-flag',
     authenticated: true,
     subHeader: {
@@ -16,14 +30,14 @@ export default {
     }
   },
   provinces: {
-    permission: 'ilocations.provinces.manage',
+    permission: 'ilocation.provinces.manage',
     activated: true,
     path: '/locations/provinces',
     name: 'qlocations.admin.provinces.index',
     crud: import('modules/qlocations/_crud/provinces'),
     page: () => import('modules/qcrud/_pages/admin/crudPage'),
     layout: () => import('layouts/master.vue'),
-    title: 'ilocations.cms.sidebar.adminProvinces',
+    title: 'ilocation.cms.sidebar.adminProvinces',
     icon: 'fa-light fa-building-flag',
     authenticated: true,
     subHeader: {
@@ -32,14 +46,14 @@ export default {
   },
   //Cities
   cities: {
-    permission: 'ilocations.cities.manage',
+    permission: 'ilocation.cities.manage',
     activated: true,
     path: '/locations/cities',
     name: 'qlocations.admin.cities.index',
     crud: import('modules/qlocations/_crud/cities'),
     page: () => import('modules/qcrud/_pages/admin/crudPage'),
     layout: () => import('layouts/master.vue'),
-    title: 'ilocations.cms.sidebar.adminCities',
+    title: 'ilocation.cms.sidebar.adminCities',
     icon: 'fa-light fa-city',
     authenticated: true,
     subHeader: {
@@ -54,7 +68,7 @@ export default {
     name: 'qlocations.admin.cities.create',
     page: () => import('modules/qlocations/_pages/admin/cities/form'),
     layout: () => import('layouts/master.vue'),
-    title: 'ilocations.cms.sidebar.adminCityCreate',
+    title: 'ilocation.cms.sidebar.adminCityCreate',
     icon: 'fa-light fa-city',
     authenticated: true,
     subHeader:{
@@ -69,7 +83,7 @@ export default {
     name: 'qlocations.admin.cities.edit',
     page: () => import('modules/qlocations/_pages/admin/cities/form'),
     layout: () => import('layouts/master.vue'),
-    title: 'ilocations.cms.sidebar.adminCityEdit',
+    title: 'ilocation.cms.sidebar.adminCityEdit',
     icon: 'fa-light fa-city',
     authenticated: true,
     subHeader:{
@@ -79,14 +93,14 @@ export default {
   },
   //Polygons
   polygons: {
-    permission: 'ilocations.polygons.manage',
+    permission: 'ilocation.polygons.manage',
     activated: true,
     path: '/locations/polygons',
     name: 'qlocations.admin.polygons.index',
     crud : import('modules/qlocations/_crud/polygons'),
     page: () => import('modules/qcrud/_pages/admin/crudPage'),
     layout: () => import('layouts/master.vue'),
-    title: 'ilocations.cms.sidebar.adminPolygons',
+    title: 'ilocation.cms.sidebar.adminPolygons',
     icon: 'fa-light fa-draw-polygon',
     authenticated: true,
     subHeader: {
@@ -95,14 +109,14 @@ export default {
   },
   //Geozones
   geozones: {
-    permission: 'ilocations.geozones.manage',
+    permission: 'ilocation.geozones.manage',
     activated: true,
     path: '/locations/geozones',
     name: 'qlocations.admin.geozones.index',
     crud : import('modules/qlocations/_crud/geozones'),
     page: () => import('modules/qcrud/_pages/admin/crudPage'),
     layout: () => import('layouts/master.vue'),
-    title: 'ilocations.cms.sidebar.adminGeozones',
+    title: 'ilocation.cms.sidebar.adminGeozones',
     icon: 'fa-light fa-chart-network',
     authenticated: true,
     subHeader: {
@@ -117,7 +131,7 @@ export default {
     name: 'qlocations.admin.geozones.create',
     page: () => import('modules/qlocations/_pages/admin/geozones/form'),
     layout: () => import('layouts/master.vue'),
-    title: 'ilocations.cms.sidebar.adminGeozoneCreate',
+    title: 'ilocation.cms.sidebar.adminGeozoneCreate',
     icon: 'fa-light fa-chart-network',
     authenticated: true,
     subHeader:{
@@ -132,7 +146,7 @@ export default {
     name: 'qlocations.admin.geozones.edit',
     page: () => import('modules/qlocations/_pages/admin/geozones/form'),
     layout: () => import('layouts/master.vue'),
-    title: 'ilocations.cms.sidebar.adminGeozoneEdit',
+    title: 'ilocation.cms.sidebar.adminGeozoneEdit',
     icon: 'fa-light fa-chart-network',
     authenticated: true,
     subHeader: {
@@ -142,14 +156,14 @@ export default {
   },
   //Neighborhoods
   neighborhoods: {
-    permission: 'ilocations.neighborhoods.manage',
+    permission: 'ilocation.neighborhoods.manage',
     activated: true,
     path: '/locations/neighborhoods',
     name: 'qlocations.admin.neighborhoods.index',
     crud : import('modules/qlocations/_crud/neighborhoods'),
     page: () => import('modules/qcrud/_pages/admin/crudPage'),
     layout: () => import('layouts/master.vue'),
-    title: 'ilocations.cms.sidebar.adminNeighborhoods',
+    title: 'ilocation.cms.sidebar.adminNeighborhoods',
     icon: 'fa-light fa-house-building',
     authenticated: true,
     subHeader: {
@@ -164,7 +178,7 @@ export default {
     name: 'qlocations.admin.neighborhoods.create',
     page: () => import('modules/qlocations/_pages/admin/neighborhoods/form'),
     layout: () => import('layouts/master.vue'),
-    title: 'ilocations.cms.sidebar.adminNeighborhoodCreate',
+    title: 'ilocation.cms.sidebar.adminNeighborhoodCreate',
     icon: 'fa-light fa-house-building',
     authenticated: true,
     subHeader:{
@@ -179,7 +193,7 @@ export default {
     name: 'qlocations.admin.neighborhoods.edit',
     page: () => import('modules/qlocations/_pages/admin/neighborhoods/form'),
     layout: () => import('layouts/master.vue'),
-    title: 'ilocations.cms.sidebar.adminNeighborhoodEdit',
+    title: 'ilocation.cms.sidebar.adminNeighborhoodEdit',
     icon: 'fa-light fa-house-building',
     authenticated: true,
     subHeader: {

@@ -15,7 +15,7 @@
           apiRoute: 'apiRoutes.qlocations.provinces',
           //permission: 'icommerce.manufacturers',
           create: {
-            title: this.$tr('ilocations.cms.newProvince'),
+            title: this.$tr('ilocation.cms.newProvince'),
             //to: {name: 'qcommerce.admin.taxRates.create'}
           },
           read: {
@@ -34,7 +34,7 @@
                 value: null,
                 type: 'select',
                 props : {
-                  label: this.$tr('ilocations.cms.form.country'),
+                  label: this.$tr('ilocation.cms.form.country'),
                 },
                 loadOptions: {
                   apiRoute: 'apiRoutes.qlocations.countries',
@@ -45,7 +45,7 @@
             }
           },
           update: {
-            title: this.$tr('ilocations.cms.updateProvince'),
+            title: this.$tr('ilocation.cms.updateProvince'),
             //to: 'qcommerce.admin.taxRates.edit'
             requestParams: {include: 'translations'}
           },
@@ -68,13 +68,13 @@
               type: 'input',
               isTranslatable: false,
               props : {
-                label: `${this.$tr('ilocations.cms.form.iso2')}*`,
+                label: `${this.$tr('ilocation.cms.form.iso2')}*`,
                 rules: [
                   val => !!val || this.$tr('isite.cms.message.fieldRequired')
                 ],
               }
             },
-          
+
             countryId: {
               value: 48,
               type: 'crud',
@@ -82,21 +82,21 @@
                 crudType: 'select',
                 crudData: import('modules/qlocations/_crud/countries'),
                 crudProps: {
-                  label: `${this.$tr('ilocations.cms.form.country')}*`,
+                  label: `${this.$tr('ilocation.cms.form.country')}*`,
                   rules: [
                     val => !!val || this.$tr('isite.cms.message.fieldRequired')
                   ],
                 },
-                ///requestParams: {include: 'translations'},                
+                ///requestParams: {include: 'translations'},
                 config: {
                   options: {label: 'name', value: 'id'},
                   filterByQuery: true,
                 }
               },
             },
-          
+
           },
-          
+
           /*formRight: {
 
           },*/

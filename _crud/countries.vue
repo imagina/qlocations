@@ -15,7 +15,7 @@
           apiRoute: 'apiRoutes.qlocations.countries',
           //permission: 'icommerce.manufacturers',
           create: {
-            title: this.$tr('ilocations.cms.newCountry'),
+            title: this.$tr('ilocation.cms.newCountry'),
             //to: {name: 'qcommerce.admin.taxRates.create'}
           },
           read: {
@@ -31,7 +31,7 @@
             requestParams: {include: 'translations'}
           },
           update: {
-            title: this.$tr('ilocations.cms.updateCountry'),
+            title: this.$tr('ilocation.cms.updateCountry'),
             //to: 'qcommerce.admin.taxRates.edit'
             requestParams: {include: 'translations'}
           },
@@ -54,7 +54,7 @@
               type: 'input',
               isTranslatable: true,
               props : {
-                label: `${this.$tr('ilocations.cms.form.fullName')}*`,
+                label: `${this.$tr('ilocation.cms.form.fullName')}*`,
                 rules: [
                   val => !!val || this.$tr('isite.cms.message.fieldRequired')
                 ],
@@ -80,7 +80,7 @@
               type: 'input',
               isTranslatable: false,
               props : {
-                label: `${this.$tr('ilocations.cms.form.regionCode')}*`,
+                label: `${this.$tr('ilocation.cms.form.regionCode')}*`,
                 rules: [
                   val => !!val || this.$tr('isite.cms.message.fieldRequired')
                 ],
@@ -91,7 +91,7 @@
               type: 'input',
               isTranslatable: false,
               props : {
-                label: `${this.$tr('ilocations.cms.form.subRegionCode')}*`,
+                label: `${this.$tr('ilocation.cms.form.subRegionCode')}*`,
                 rules: [
                   val => !!val || this.$tr('isite.cms.message.fieldRequired')
                 ],
@@ -102,7 +102,7 @@
               type: 'input',
               isTranslatable: false,
               props : {
-                label: `${this.$tr('ilocations.cms.form.countryCode')}*`,
+                label: `${this.$tr('ilocation.cms.form.countryCode')}*`,
                 rules: [
                   val => !!val || this.$tr('isite.cms.message.fieldRequired')
                 ],
@@ -113,7 +113,7 @@
               type: 'input',
               isTranslatable: false,
               props : {
-                label: `${this.$tr('ilocations.cms.form.callingCode')}*`,
+                label: `${this.$tr('ilocation.cms.form.callingCode')}*`,
                 rules: [
                   val => !!val || this.$tr('isite.cms.message.fieldRequired')
                 ],
@@ -126,7 +126,7 @@
               type: 'input',
               isTranslatable: false,
               props : {
-                label: `${this.$tr('ilocations.cms.form.currency')}*`,
+                label: `${this.$tr('ilocation.cms.form.currency')}*`,
                 rules: [
                   val => !!val || this.$tr('isite.cms.message.fieldRequired')
                 ],
@@ -137,7 +137,7 @@
               type: 'input',
               isTranslatable: false,
               props : {
-                label: `${this.$tr('ilocations.cms.form.currencySymbol')}*`,
+                label: `${this.$tr('ilocation.cms.form.currencySymbol')}*`,
                 rules: [
                   val => !!val || this.$tr('isite.cms.message.fieldRequired')
                 ],
@@ -148,7 +148,7 @@
               type: 'input',
               isTranslatable: false,
               props : {
-                label: `${this.$tr('ilocations.cms.form.currencyCode')}*`,
+                label: `${this.$tr('ilocation.cms.form.currencyCode')}*`,
                 rules: [
                   val => !!val || this.$tr('isite.cms.message.fieldRequired')
                 ],
@@ -159,7 +159,7 @@
               type: 'input',
               isTranslatable: false,
               props : {
-                label: `${this.$tr('ilocations.cms.form.currencySubUnit')}*`,
+                label: `${this.$tr('ilocation.cms.form.currencySubUnit')}*`,
                 rules: [
                   val => !!val || this.$tr('isite.cms.message.fieldRequired')
                 ],
@@ -170,7 +170,7 @@
               type: 'input',
               isTranslatable: false,
               props : {
-                label: `${this.$tr('ilocations.cms.form.iso2')}*`,
+                label: `${this.$tr('ilocation.cms.form.iso2')}*`,
                 rules: [
                   val => !!val || this.$tr('isite.cms.message.fieldRequired')
                 ],
@@ -181,7 +181,7 @@
               type: 'input',
               isTranslatable: false,
               props : {
-                label: `${this.$tr('ilocations.cms.form.iso3')}*`,
+                label: `${this.$tr('ilocation.cms.form.iso3')}*`,
                 rules: [
                   val => !!val || this.$tr('isite.cms.message.fieldRequired')
                 ],

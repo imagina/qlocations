@@ -15,7 +15,7 @@ export default {
         apiRoute: 'apiRoutes.qlocations.polygons',
         //permission: 'icommerce.manufacturers',
         create: {
-          title: this.$tr('ilocations.cms.newPolygon')
+          title: this.$tr('ilocation.cms.newPolygon')
         },
         read: {
           columns: [
@@ -33,7 +33,7 @@ export default {
               value: null,
               type: 'select',
               props : {
-                label: this.$tr('ilocations.cms.form.country'),
+                label: this.$tr('ilocation.cms.form.country'),
               },
               loadOptions: {
                 apiRoute: 'apiRoutes.qlocations.countries',
@@ -44,7 +44,7 @@ export default {
               value: null,
               type: 'select',
               props : {
-                label: this.$tr('ilocations.cms.form.province'),
+                label: this.$tr('ilocation.cms.form.province'),
               },
               loadOptions: {
                 apiRoute: 'apiRoutes.qlocations.provinces',
@@ -54,7 +54,7 @@ export default {
           }*/
         },
         update: {
-          title: this.$tr('ilocations.cms.updatePolygon')
+          title: this.$tr('ilocation.cms.updatePolygon')
         },
         delete: true,
         formLeft: {

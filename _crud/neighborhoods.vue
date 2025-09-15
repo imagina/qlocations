@@ -13,9 +13,9 @@ export default {
         crudId: this.crudId,
         entityName: config("main.qlocations.entityNames.neighborhood"),
         apiRoute: 'apiRoutes.qlocations.neighborhoods',
-        permission: 'ilocations.neighborhoods',
+        permission: 'ilocation.neighborhoods',
         create: {
-          title: this.$tr('ilocations.cms.newNeighborhood')
+          title: this.$tr('ilocation.cms.newNeighborhood')
         },
         read: {
           columns: [
@@ -26,7 +26,7 @@ export default {
               format: val => val ? val.name : '-',
             },
             {
-              name: 'province', label: this.$tr('ilocations.cms.form.province'), field: 'province', align: 'left',
+              name: 'province', label: this.$tr('ilocation.cms.form.province'), field: 'province', align: 'left',
               format: val => val ? val.name : '-',
             },
             {
@@ -49,7 +49,7 @@ export default {
               value: null,
               type: 'select',
               props: {
-                label: this.$tr('ilocations.cms.form.country'),
+                label: this.$tr('ilocation.cms.form.country'),
                 clearable: true
               },
               loadOptions: {
@@ -61,7 +61,7 @@ export default {
               value: null,
               type: 'select',
               props: {
-                label: this.$tr('ilocations.cms.form.province'),
+                label: this.$tr('ilocation.cms.form.province'),
                 clearable: true
               },
               loadOptions: {
@@ -84,7 +84,7 @@ export default {
           }
         },
         update: {
-          title: this.$tr('ilocations.cms.updateNeighborhood'),
+          title: this.$tr('ilocation.cms.updateNeighborhood'),
           requestParams: {include: 'city,province,country'}
         },
         delete: true,
@@ -116,7 +116,7 @@ export default {
             type: 'select',
             required: true,
             props: {
-              label: `${this.$tr('ilocations.cms.form.province')}*`,
+              label: `${this.$tr('ilocation.cms.form.province')}*`,
               readonly: (this.crudInfo.countryId ? false : true)
             },
             loadOptions: {

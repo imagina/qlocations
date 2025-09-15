@@ -9,4 +9,5 @@ export default {
   polygons: `${urlBase}/polygons`,
   geozones: `${urlBase}/geozones`,
   neighborhoods: `${urlBase}/neighborhoods`,
-}
+  locatables: `${urlBase}/locatables`
+};

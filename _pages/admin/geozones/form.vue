@@ -40,7 +40,7 @@
                           },
                           props : {
                             clearable: true,
-                            label: `${$tr('ilocations.cms.form.country')}*`,
+                            label: `${$tr('ilocation.cms.form.country')}*`,
                             rules: [val => !!val || $tr('isite.cms.message.fieldRequired')]
                           }
                         }"
@@ -64,7 +64,7 @@
                           },
                           props : {
                             clearable: true,
-                            label: `${$tr('ilocations.cms.form.province')}*`,
+                            label: `${$tr('ilocation.cms.form.province')}*`,
                             options:[{
                               label: $trp('isite.cms.label.all'), value: '0'
                             }],
@@ -90,7 +90,7 @@
                           },
                           props : {
                             clearable: true,
-                            label: `${$tr('ilocations.cms.form.city')}*`,
+                            label: `${$tr('ilocation.cms.form.city')}*`,
                             options:[{
                               label: $trp('isite.cms.label.all'), value: '0'
                             }],

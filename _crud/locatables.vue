@@ -79,6 +79,7 @@ export default {
             },
           ],
           requestParams: {
+            filter: { entityType: '__global__' },
             include:
               'translations,country.translations,province.translations,city.translations',
           },

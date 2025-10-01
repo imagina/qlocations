@@ -31,12 +31,6 @@ export default {
               align: 'left',
             },
             {
-              name: 'systemName',
-              label: this.$tr('isite.cms.form.systemName'),
-              field: 'systemName',
-              align: 'left',
-            },
-            {
               name: 'country',
               label: this.$tr('ilocation.cms.form.country'),
               field: 'country',
@@ -161,16 +155,6 @@ export default {
               ],
             },
           },
-          systemName: {
-            value: '',
-            type: 'input',
-            props: {
-              label: `${this.$tr('isite.cms.form.systemName')}*`,
-              rules: [
-                (val) => !!val || this.$tr('isite.cms.message.fieldRequired'),
-              ],
-            },
-          },
           countryId: {
             value: null,
             type: 'select',
@@ -193,7 +177,10 @@ export default {
             },
             loadOptions: {
               apiRoute: 'apiRoutes.qlocations.provinces',
-              requestParams: { include: 'translations' },
+              requestParams: {
+                include: 'translations',
+                filter: {countryId: this.crudInfo.countryId}
+              },
               select: { label: 'name', id: 'id' },
               filterByQuery: true,
             },
@@ -207,7 +194,10 @@ export default {
             },
             loadOptions: {
               apiRoute: 'apiRoutes.qlocations.cities',
-              requestParams: { include: 'translations' },
+              requestParams: {
+                include: 'translations',
+                filter: {provinceId: this.crudInfo.provinceId}
+              },
               select: { label: 'name', id: 'id' },
               filterByQuery: true,
             },

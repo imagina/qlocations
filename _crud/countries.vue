@@ -21,7 +21,7 @@
           read: {
             columns: [
               {name: 'id', label: this.$tr('isite.cms.form.id'), field: 'id', style: 'width: 50px'},
-              {name: 'name', label: this.$tr('isite.cms.form.name'), field: 'name', align: 'left'},
+              {name: 'name', label: this.$tr('isite.cms.form.title'), field: 'title', align: 'left'},
               {
                 name: 'created_at', label: this.$tr('isite.cms.form.createdAt'), field: 'createdAt', align: 'left',
                 format: val => val ? this.$trd(val) : '-',
@@ -38,12 +38,12 @@
           delete: true,
           formLeft: {
             id: {value: ''},
-            name: {
+            title: {
               value: '',
               type: 'input',
               isTranslatable: true,
               props : {
-                label: `${this.$tr('isite.cms.form.name')}*`,
+                label: `${this.$tr('isite.cms.form.title')}*`,
                 rules: [
                   val => !!val || this.$tr('isite.cms.message.fieldRequired')
                 ],

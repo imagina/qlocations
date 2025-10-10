@@ -20,15 +20,15 @@ export default {
         read: {
           columns: [
             {name: 'id', label: this.$tr('isite.cms.form.id'), field: 'id', style: 'width: 50px'},
-            {name: 'name', label: this.$tr('isite.cms.form.name'), field: 'name', align: 'left'},
+            {name: 'name', label: this.$tr('isite.cms.form.title'), field: 'title', align: 'left'},
             {name: 'code', label: this.$tr('ilocation.cms.form.code'), field: 'code', align: 'left'},
             {
               name: 'country', label: this.$tr('ilocation.cms.form.country'), field: 'country', align: 'left',
-              format: val => val.name || '-'
+              format: val => val.title || '-'
             },
             {
               name: 'province', label: this.$tr('ilocation.cms.form.province'), field: 'province', align: 'left',
-              format: val => val.name || '-'
+              format: val => val.title || '-'
             },
             {
               name: 'created_at', label: this.$tr('isite.cms.form.createdAt'), field: 'createdAt', align: 'left',
@@ -69,12 +69,12 @@ export default {
         },
         delete: true,
         formLeft: {
-          name: {
+          title: {
             type: 'input',
             isTranslatable: true,
             required: true,
             props: {
-              label: `${this.$tr('isite.cms.form.name')}*`
+              label: `${this.$tr('isite.cms.form.title')}*`
             }
           },
           code: {
@@ -96,7 +96,7 @@ export default {
               config: {
                 filterByQuery: true,
                 options: {
-                  label: 'name', value: 'id'
+                  label: 'title', value: 'id'
                 }
               }
             },
@@ -114,7 +114,7 @@ export default {
               config: {
                 filterByQuery: true,
                 options: {
-                  label: 'name', value: 'id'
+                  label: 'title', value: 'id'
                 },
                 requestParams: {filter: {countryId: this.crudInfo.countryId}}
               }

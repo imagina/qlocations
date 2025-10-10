@@ -13,8 +13,8 @@
                 @submit="itemId?updateItem():createItem()" @validation-error="$alert.error($tr('isite.cms.message.formInvalid'))">
           <div class="row q-col-gutter-md">
             <div class="col-12 col-md-6">
-              <q-input outlined dense v-model="locale.formTemplate.name"
-                       :label="`${$tr('isite.cms.form.name')} (${locale.language})*`"
+              <q-input outlined dense v-model="locale.formTemplate.title"
+                       :label="`${$tr('isite.cms.form.title')} (${locale.language})*`"
                        :rules="[val => !!val || $tr('isite.cms.message.fieldRequired')]"/>
             </div>
             <div class="col-12 col-md-6">

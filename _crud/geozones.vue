@@ -21,7 +21,7 @@
           read: {
             columns: [
               {name: 'id', label: this.$tr('isite.cms.form.id'), field: 'id', style: 'width: 50px'},
-              {name: 'name', label: this.$tr('isite.cms.form.name'), field: 'name', align: 'left'},
+              {name: 'name', label: this.$tr('isite.cms.form.title'), field: 'title', align: 'left'},
               {
                 name: 'created_at', label: this.$tr('isite.cms.form.createdAt'), field: 'createdAt', align: 'left',
                 format: val => val ? this.$trd(val) : '-',

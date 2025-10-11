@@ -164,7 +164,7 @@ export default {
             loadOptions: {
               apiRoute: 'apiRoutes.qlocations.countries',
               requestParams: { include: 'translations' },
-              select: { label: 'name', id: 'id' },
+              select: { label: 'title', id: 'id' },
               filterByQuery: true,
             },
           },
@@ -181,7 +181,7 @@ export default {
                 include: 'translations',
                 filter: {countryId: this.crudInfo.countryId}
               },
-              select: { label: 'name', id: 'id' },
+              select: { label: 'title', id: 'id' },
               filterByQuery: true,
             },
           },
@@ -198,7 +198,7 @@ export default {
                 include: 'translations',
                 filter: {provinceId: this.crudInfo.provinceId}
               },
-              select: { label: 'name', id: 'id' },
+              select: { label: 'title', id: 'id' },
               filterByQuery: true,
             },
           },
